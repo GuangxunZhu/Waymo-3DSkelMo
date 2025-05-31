@@ -14,7 +14,7 @@ The code and full dataset will be available soon!
 In the meantime, you can download an example from [Google Drive](https://drive.google.com/drive/folders/1uoImDQZKVnr_Evrru5nyS1sI85mVP-af?usp=sharing).
 
 ## 🎞️ Demo Visualization
-<table style="width: 100%;">
+<!-- <table style="width: 100%;">
   <tr>
     <td style="width: 50%; text-align: center;">
       <img src="images/multi_skeletons-40.gif" style="height: 200px; object-fit: contain;" alt="GIF1">
@@ -25,7 +25,17 @@ In the meantime, you can download an example from [Google Drive](https://drive.g
     <p>NeMF-based (orange) vs. LiDAR-HMR Raw Output</p>
     </td>
   </tr>
-</table>
+</table> -->
+
+<p align="center">
+  <img src="images/multi_skeletons-40.gif" style="height: 260px; object-fit: contain;" alt="GIF1"><br>
+  <em>Example scene of multi-agent interaction from the Waymo-3DSkelMo dataset.</em>
+</p>
+
+<p align="center">
+  <img src="images/nemf_raw_blender0001-0079.gif" style="height: 260px; object-fit: contain;" alt="GIF2"><br>
+  <em>NeMF-based (orange) vs. LiDAR-HMR Raw Output</em>
+</p>
 
 <p align="center">
   <img src="images/dataset_example.png" style="height: 520px; object-fit: contain;" alt="dataset_example"><br>
