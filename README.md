@@ -20,7 +20,7 @@ In the meantime, you can download an example from [Google Drive](https://drive.g
       <img src="images/multi_skeletons-40.gif" style="height: 200px; object-fit: contain;" alt="GIF1">
       <p>Example scene of multi-agent interaction from the Waymo-3DSkelMo dataset.</p>
     </td>
-    <td style="width: 50%; text-align: center;">
+    <td style="width: 100%; text-align: center;">
       <img src="images/nemf_raw_blender0001-0079.gif" style="height: 200px; object-fit: contain;" alt="GIF2">
     <p>NeMF-based (orange) vs. LiDAR-HMR Raw Output</p>
     </td>
