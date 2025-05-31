@@ -1,5 +1,7 @@
 # Waymo-3DSkelMo
-A Multi-Agent 3D Skeletal Motion Dataset for Interaction Modeling in Autonomous Driving Systems
+A Multi-Agent 3D Skeletal Motion Dataset for Pedestrian Interaction Modeling in Autonomous Driving
 
-# The dataset and code will be available soon!
+# The code and full dataset are available soon!
+
+![Demo](./images/multi_skeletons-40.gif)
 
