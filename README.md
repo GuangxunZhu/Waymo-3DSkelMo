@@ -3,5 +3,5 @@ A Multi-Agent 3D Skeletal Motion Dataset for Pedestrian Interaction Modeling in 
 
 # The code and full dataset are available soon!
 
-![Demo](./images/multi_skeletons-40.gif)
+![Demo](./images/multi_skeletons-40-2.gif)
 
