@@ -11,7 +11,7 @@ A Multi-Agent 3D Skeletal Motion Dataset for Pedestrian Interaction Modeling in 
 ## 📦 Resources
 
 The code and full dataset will be available soon!  
-In the meantime, you can download an example from [Google Drive](https://drive.google.com/drive/folders/1uoImDQZKVnr_Evrru5nyS1sI85mVP-af?usp=sharing).
+<!-- In the meantime, you can download an example from [Google Drive](https://drive.google.com/drive/folders/1uoImDQZKVnr_Evrru5nyS1sI85mVP-af?usp=sharing). -->
 
 ## 🎞️ Demo Visualization
 <!-- <table style="width: 100%;">
