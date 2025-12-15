@@ -145,6 +145,12 @@ Instead, please refer to [MDM issues](https://github.com/GuyTevet/motion-diffusi
 
 Download and unzip the archive, then from the extracted folders locate the innermost `t2m` directory and move it to the project root: `<project_root>/t2m`.
 
+After all the above are prepared, and you have updated the data paths in `evaluation/eval_FID.py` (e.g., HumanML3D and generated dataset paths), you can compute FID by running:
+
+~~~bash
+python evaluation/eval_FID.py
+~~~
+
 # Acknowledgements
 
 We gratefully acknowledge that our work is primarily built upon the [Waymo Open Dataset](https://waymo.com/open), [LiDAR-HMR](https://github.com/soullessrobot/LiDAR-HMR), and [NeMF](https://github.com/c-he/NeMF). We also make use of several libraries and toolkits, including [SMPL](https://smpl.is.tue.mpg.de/), [SMPL+H](https://mano.is.tue.mpg.de/), [SMPL-X](https://smpl-x.is.tue.mpg.de/), [HuMoR](https://github.com/davrempe/humor), [Point Transformer-V2](https://github.com/Pointcept/PointTransformerV2), [ChamferDistancePytorch](https://github.com/ThibaultGROUEIX/ChamferDistancePytorch), [HumanML3D](https://github.com/EricGuo5513/HumanML3D), and [diffusion-motion-inbetweening (T2M evaluators)](https://github.com/setarehc/diffusion-motion-inbetweening). We thank all of these works for making their code, models, and datasets publicly available.
