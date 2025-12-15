@@ -1,0 +1,36 @@
+# Editor / IDE
+.vscode/
+
+# Evaluation assets
+evaluation/body_models/
+FID_data/
+
+# HUMOR / LiDAR checkpoints
+humor/body_models/
+LiDAR-HMR/lidar_hmr_ckpt/
+LiDAR-HMR/smplx_models/
+
+# NeMF training data and outputs
+NeMF/data/
+NeMF/outputs/
+NeMF/save/
+
+# Other large artifacts
+t2m/
+
+# visualizations
+vis/matplotlib_videos/
+
+# Temporary files
+__pycache__/
+*.pyc
+
+# build artifacts
+LiDAR-HMR/PointTransformerV2/libs/pointops/build/
+LiDAR-HMR/PointTransformerV2/libs/pointops/pointops.egg-info/
+LiDAR-HMR/PointTransformerV2/libs/pointops2/build/
+LiDAR-HMR/PointTransformerV2/libs/pointops2/pointops.egg-info/
+LiDAR-HMR/models/LiDARCap/pointnet2_ops_lib/build/
+LiDAR-HMR/models/LiDARCap/pointnet2_ops_lib/pointnet2_ops.egg-info/
+
+

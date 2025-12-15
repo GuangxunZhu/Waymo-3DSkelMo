@@ -1,0 +1,16 @@
+# dataset_dir: ./data/amass/test
+dataset_dir: ./data/amass/gmp_filtered_action
+# dataset_dir: ./data/amass/single
+# dataset_dir: ./data/AMASS_all/no_split
+
+
+data:
+    fps: 30
+    clip_length: 128
+    gender: neutral # male
+    up: z
+
+canonical: False
+unified_orientation: False
+single_motion: False
+normalize: False

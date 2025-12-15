@@ -1,0 +1,19 @@
+git+https://github.com/nghorbani/human_body_prior
+git+https://github.com/nghorbani/configer
+
+autopep8
+pylint
+# torch==1.9.0
+matplotlib
+plyfile
+scikit-learn
+tensorboard
+pandas
+tqdm
+pyyaml
+pybullet
+numba
+umap-learn[plot]
+transformations==2019.4.22
+torchgeometry==0.1.2
+setuptools==59.5.0

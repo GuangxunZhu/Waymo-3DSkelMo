@@ -1,0 +1,8 @@
+dataset_dir: ./data/dog
+
+data:
+    fps: 60
+    up: y
+
+canonical: False
+unified_orientation: True

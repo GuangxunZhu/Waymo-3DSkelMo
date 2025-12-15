@@ -1,0 +1,93 @@
+globals:
+  root_dir: /dataset/guangxun/test
+  waymo_dir: waymo
+  waymo_extracted_dir: waymo_extracted
+  lidarhmr_dir: lidar_hmr_results
+  amass_dir: amass_format
+  humor_dir: humor
+  nemf_preprocessed_dir: nemf_preprocessed
+  nemf_dir: generated
+
+steps:
+  - name: extract_waymo
+    env: waymo_tf_gpu
+    script: scripts/extract_waymo.py
+    args:
+      waymo-dir: "{root_dir}/{waymo_dir}"
+      # waymo-dir: "/dataset/guangxun/dataset"
+      output-dir: "{root_dir}/{waymo_extracted_dir}"
+      splits: ['training', 'validation']
+
+  - name: lidarhmr
+    env: lidar-hmr
+    script: LiDAR-HMR/gen_lidar_hmr_waymo.py
+    args:
+      dataset: "waymov2"
+      state_dict: "LiDAR-HMR/lidar_hmr_ckpt/waymov2/lidar_hmr_mesh.pth"
+      cfg: "LiDAR-HMR/configs/mesh/waymo.yaml"
+      dataset-path: "{root_dir}/{waymo_extracted_dir}"
+      save-path: "{root_dir}/{lidarhmr_dir}"
+      batch-size: 32
+
+  - name: convert_amass
+    env: lidar-hmr
+    script: scripts/convert_amass.py
+    args:
+      waymo-path: "{root_dir}/{waymo_extracted_dir}"
+      lidarhmr-path: "{root_dir}/{lidarhmr_dir}"
+      save-path: "{root_dir}/{amass_dir}"
+      splits: [training, validation]
+      smpl-model-dir: LiDAR-HMR/smplx_models
+      gender: neutral
+      video-dir: null
+      video-fps: 10
+
+  - name: humor_preprocess
+    env: rohm
+    script: humor/process_waymo_data.py
+    args:
+      waymo-root: "{root_dir}/{amass_dir}/30fps"
+      out: "{root_dir}/{humor_dir}"
+      smplh-root: "humor/body_models/smplh"
+
+  - name: clip_into_fixed_length
+    env: lidar-hmr
+    script: scripts/clip_dataset.py
+    args:
+      dataset-dir: "{root_dir}/{humor_dir}"
+      gt-index-dir: "{root_dir}/{amass_dir}/30fps_gt_index"
+      pseudo-gt-index-dir: "{root_dir}/{amass_dir}/30fps_pesudo_gt_index"
+      clip-save-dir: "{root_dir}/{humor_dir}/clip"
+      group-save-dir: "{root_dir}/{humor_dir}/grouped"
+      splits: ["training", "validation"]
+      clip-frames: 128
+      overlap: 2
+      num-groups: 12
+
+  - name: nemf_preprocess
+    env: NeMF
+    script: NeMF/waymo_preprocessing.py
+    args:
+      group-dir: "{root_dir}/{humor_dir}/grouped"
+      gt-index-dir: "{root_dir}/{humor_dir}/grouped/30fps_gt_index_grouped"
+      pseudo-index-dir: "{root_dir}/{humor_dir}/grouped/30fps_pesudo_gt_index_grouped"
+      num-groups: 12
+
+  - name: nemf_generation
+    env: NeMF
+    script: NeMF/src/application.py
+    args:
+      config: "application_waymo.yaml"
+      task: "motion_inbetweening"
+      save_path: "NeMF/save/waymo"
+      num_groups: 12
+
+  - name: export_nemf_generation
+    env: NeMF
+    script: scripts/export_final_data.py
+    args:
+      gen-results-path: "NeMF/save/waymo"
+      data-metas-path: "NeMF/data/waymo/generative"
+      interpolation-results-path: "{root_dir}/{amass_dir}/30fps"
+      clips-save-dir: "{root_dir}/{nemf_dir}/clips"
+      humor-root: "{root_dir}/{humor_dir}"

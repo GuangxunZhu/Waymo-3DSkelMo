@@ -1,0 +1,42 @@
+multi_gpu: False
+verbose: True
+
+is_train: True
+log: True
+
+epoch_begin: 0
+iterations: 8000
+
+amass_data: False
+dataset_dir: ./data/dog
+save_dir: ./outputs/dog
+bvh_viz: True
+
+learning_rate: 0.0001
+geodesic_loss: True
+l1_loss: True
+lambda_rotmat: 1
+lambda_pos: 10
+lambda_orient: 1
+lambda_v: 1
+lambda_up: 1
+lambda_trans: 1
+
+data:
+    fps: 60
+    up: y
+    root_transform: True
+
+nemf:
+    siren: False
+    skip_connection: True
+    norm_layer: True
+    bandwidth: 7
+    hidden_neuron: 1024
+    local_z: 0
+    global_z: 0
+    local_output: 172 # 27 x 6 + 6 + 4
+    global_output: 1
+
+scheduler:
+    name:

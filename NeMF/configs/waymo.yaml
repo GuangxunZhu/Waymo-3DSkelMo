@@ -1,0 +1,14 @@
+
+dataset_dir: ./NeMF/data/waymo/generative
+
+
+data:
+    fps: 30
+    clip_length: 128
+    gender: neutral
+    up: z
+
+canonical: False
+unified_orientation: True
+single_motion: False
+normalize: True

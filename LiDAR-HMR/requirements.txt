@@ -1,0 +1,147 @@
+addict
+ansi2html
+asttokens
+async-timeout
+attrs
+backcall
+blinker
+boto3
+botocore
+Brotli
+bvhtoolbox
+cachetools
+certifi
+charset-normalizer
+chumpy
+click
+colorama
+comm
+ConfigArgParse
+contourpy
+cycler
+dash
+dash-core-components
+dash-html-components
+dash-table
+decorator
+easydict
+einops
+executing
+fastjsonschema
+filelock
+Flask
+fonttools
+fsspec 
+fvcore
+h5py 
+huggingface_hub
+idna
+ifaddr
+importlib-metadata
+importlib-resources
+iopath
+ipython
+ipywidgets
+itsdangerous
+jedi
+Jinja2
+jmespath
+joblib
+jsonschema
+jsonschema-specifications
+jupyter_core
+jupyterlab-widgets
+kiss-icp
+kiwisolver
+laspy
+markdown-it-py
+MarkupSafe
+matplotlib
+matplotlib-inline
+mdurl
+mkl-fft
+mkl-random
+mkl-service
+more-itertools
+natsort
+nbformat
+nest-asyncio
+numpy
+nvidia-ml-py
+nvitop
+olefile
+open3d
+opencv-python
+# ouster-mapping
+ouster-sdk
+packaging
+pandas
+parso
+pexpect
+pickleshare
+pillow
+pkgutil_resolve_name
+platformdirs
+plotly
+plyfile
+# pointnet2-ops @ file:LiDAR-HMR/models/LiDARCap/pointnet2_ops_lib
+# pointops==1.0
+portalocker
+prettytable
+prompt-toolkit
+protobuf
+psutil
+ptyprocess
+pure-eval
+pydantic
+Pygments
+pyparsing
+pyquaternion
+PySocks
+python-dateutil
+python-magic
+# pytorch3d
+pytz
+# PyYAM
+referencing
+requests
+retrying
+rich
+rpds-py
+s3transfer
+safetensors
+scikit-learn
+scipy
+SharedArray
+shellingham
+six
+# smplx
+stack-data
+tabulate
+tenacity
+tensorboardX
+termcolor
+threadpoolctl
+# timm
+tomli
+# torch
+# torch-cluster
+# torch-scatter
+# torch-sparse
+# torch_geometric
+# torchaudio
+# torchvision
+tqdm
+traitlets
+transforms3d
+typer
+typing_extensions
+tzdata
+urllib3
+wcwidth
+Werkzeug
+widgetsnbextension
+yacs
+yapf
+zeroconf
+zipp
