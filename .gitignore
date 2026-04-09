@@ -33,4 +33,7 @@ LiDAR-HMR/PointTransformerV2/libs/pointops2/pointops.egg-info/
 LiDAR-HMR/models/LiDARCap/pointnet2_ops_lib/build/
 LiDAR-HMR/models/LiDARCap/pointnet2_ops_lib/pointnet2_ops.egg-info/
 
+# All system files
+.DS_Store
+
 
